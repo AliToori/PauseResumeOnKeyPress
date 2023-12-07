@@ -31,7 +31,7 @@ def straightMethod(stdscr):
                 print('*** sending msg ***')
                 channel.basic_publish(exchange='ex', routing_key='rk', body=line)
             except pika.exceptions.ConnectionClosed:
-                print('** Unable to publish connection failed **')
+                print('***** Unable to publish connection failed *****')
             except:
                 print('*** bad line ***')
             time.sleep(4)
